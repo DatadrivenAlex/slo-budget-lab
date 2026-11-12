@@ -1,0 +1,51 @@
+{
+  "target": "0.999",
+  "allowed_error_ratio": "0.001",
+  "state": "clear",
+  "windows": {
+    "1h": {
+      "state": "ok",
+      "requests": 120000,
+      "errors": 12,
+      "error_ratio": "0.0001",
+      "burn_rate": "0.1"
+    },
+    "30m": {
+      "state": "ok",
+      "requests": 60000,
+      "errors": 6,
+      "error_ratio": "0.0001",
+      "burn_rate": "0.1"
+    },
+    "5m": {
+      "state": "ok",
+      "requests": 10000,
+      "errors": 1,
+      "error_ratio": "0.0001",
+      "burn_rate": "0.1"
+    },
+    "6h": {
+      "state": "ok",
+      "requests": 720000,
+      "errors": 72,
+      "error_ratio": "0.0001",
+      "burn_rate": "0.1"
+    }
+  },
+  "rules": [
+    {
+      "name": "fast",
+      "short_window": "5m",
+      "long_window": "1h",
+      "threshold": "14.4",
+      "state": "clear"
+    },
+    {
+      "name": "slow",
+      "short_window": "30m",
+      "long_window": "6h",
+      "threshold": "6",
+      "state": "clear"
+    }
+  ]
+}

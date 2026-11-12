@@ -1,0 +1,9 @@
+{
+  "target": "0.999",
+  "windows": {
+    "5m": {"requests": 10000, "errors": 200},
+    "1h": {"requests": 120000, "errors": 2400},
+    "30m": {"requests": 60000, "errors": 900},
+    "6h": {"requests": 720000, "errors": 7200}
+  }
+}

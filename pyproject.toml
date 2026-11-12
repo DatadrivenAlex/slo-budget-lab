@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "slo-budget-lab"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Offline request-based SLO burn-rate analysis demo"
+dependencies = []
+[project.scripts]
+slolab = "slolab.cli:main"
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.8,<1"]
+[tool.setuptools.packages.find]
+include = ["slolab*"]
+[tool.ruff]
+line-length = 100
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
